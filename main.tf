@@ -23,6 +23,7 @@ resource "tfe_workspace" "temporary" {
   project_id = tfe_project.temporary.id
   tag_names  = ["demo", "tfe-provider"]
   auto_destroy_activity_duration = "1d"
+  assessments_enabled = true
 }
 
 resource "tfe_team" "temporary" {
